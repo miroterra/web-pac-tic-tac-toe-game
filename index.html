@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="/css/overlays.css" />
     <link rel="stylesheet" href="/css/configuration.css" />
     <link rel="stylesheet" href="/css/game.css" />
+    <!-- JS -->
+    <script src="/js/config.js" defer></script>
+    <script src="/js/game.js" defer></script>
+    <script src="/js/app.js" defer></script>
   </head>
   <body>
     <div id="backdrop"></div>
@@ -29,7 +33,7 @@
             <input type="text" name="username" id="playername" />
           </div>
           <div>
-            <button type="button" class="btn btn-alt">Cancel</button>
+            <button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
             <button type="submit" class="btn">Confirm</button>
           </div>
         </form>
@@ -41,7 +45,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player-1-btn">Edit</button>
             </article>
           </li>
           <li>
@@ -49,19 +53,19 @@
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">O</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
             </article>
           </li>
         </ol>
         <button class="btn">Start New Game</button>
       </section>
       <section id="active-game">
-        <article>
-          <h3>You Won, <span id="winner-name">PLAYER NAME</span></h3>
+        <article id="game-over">
+          <h2>You Won, <span id="winner-name">PLAYER NAME</span></h2>
           <p>Click "Start New Game" above, to start a new game!</p>
         </article>
         <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
-        <ol>
+        <ol id="game-board">
           <li></li>
           <li></li>
           <li></li>
